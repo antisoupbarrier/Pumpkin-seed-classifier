@@ -171,6 +171,8 @@ python predict-test.py
 
 ### Commands for AWS Elastic Beanstalk CLI:
 
+NOTE: You must have an AWS account that is set up with AWS CLI for the following commands to work.
+
 Run these from within the project directory.
 
 Note: Replace 'us-east-1' with your local AWS region.
@@ -192,7 +194,7 @@ eb local run --port 9696
 eb create seedtype-serving-env
 ```
 
-You will need to capture the elastic beanstalk service url host within the predict-test.py to make a request. You can find this within the logs after running eb create, or obtained on the AWS Elastic Beanstalk Environments page.
+You will need to capture the elastic beanstalk service url host and update the url within predict-test.py to make a request. You can find this within the logs after running eb create, or obtained on the AWS Elastic Beanstalk Environments page.
 
 ```bash
 python predict-test.py
@@ -204,3 +206,5 @@ Don't forget to shut down the eb service when finished.
 ```bash
 eb terminate seedtype-serving-env
 ```
+
+Images of running AWS Elastic Beanstalk service can be found within images folder.
